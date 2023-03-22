@@ -7,3 +7,6 @@ class Product(models.Model):
     name = models.CharField(max_length=100)
     detail = models.TextField()
 
+    class Meta:
+        db_table = "product"
+

@@ -22,7 +22,7 @@ def index(request):
 # Create your views here.
 @api_view(['GET'])
 def homePage(request):
-    products = [product1, product2, product3]
+    products = Product.objects.all()
     serializer = ProductSerializer(products, many=True)
     return Response(serializer.data)
 
